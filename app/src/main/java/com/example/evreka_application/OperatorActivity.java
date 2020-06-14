@@ -3,6 +3,7 @@ package com.example.evreka_application;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -12,6 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.clustering.ClusterManager;
 
@@ -40,6 +42,17 @@ public class OperatorActivity extends FragmentActivity implements OnMapReadyCall
     }
 
 
+    protected boolean onMarkerClick(Marker marker) {
+        Log.i("GoogleMapActivity", "onMarkerClick");
+        LatLng position = marker.getPosition();
+        String idSelected= marker.getId();
+/*  Toast.makeText(getApplicationContext(),
+            "Marker Clicked: " + marker.getTitle(), Toast.LENGTH_LONG)
+            .show();*/
+
+        return false;
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -53,6 +66,7 @@ public class OperatorActivity extends FragmentActivity implements OnMapReadyCall
         googleMap.getUiSettings().setRotateGesturesEnabled(true);
         googleMap.getUiSettings().setScrollGesturesEnabled(true);
         googleMap.getUiSettings().setTiltGesturesEnabled(true);
+
 
         mMap.setMinZoomPreference(6.0f);
         mMap.setMaxZoomPreference(14.0f);
@@ -83,4 +97,5 @@ public class OperatorActivity extends FragmentActivity implements OnMapReadyCall
        });
 
     }
+
 }

@@ -8,4 +8,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="operation_activity">operation activity</string>
     <string name="title_activity_operator">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
