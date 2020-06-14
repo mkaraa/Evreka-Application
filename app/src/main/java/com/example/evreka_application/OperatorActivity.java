@@ -16,13 +16,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.clustering.ClusterManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 public class OperatorActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ClusterManager<MyItem> clusterManager;
     private List<MyItem> items = new ArrayList<>();
+
+    //9.55, 122.52 asia continent latlng
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
