@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Evreka</string>
+    <string name="todo">TODO</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="username">Username</string>
+    <string name="please_enter_your_user_name_and_password_t2">Please enter your user name and password. (T2)</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="operation_activity">operation activity</string>
+    <string name="title_activity_operator">Map</string>
+</resources>

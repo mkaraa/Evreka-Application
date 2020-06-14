@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=DA:D5:4F:9E:96:99:C2:B0:DA:3C:2B:D8:C9:CD:88:70:C4:A5:39:1F%3Bcom.example.evreka_application
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.evreka_application
+
+    SHA-1 certificate fingerprint:
+    DA:D5:4F:9E:96:99:C2:B0:DA:3C:2B:D8:C9:CD:88:70:C4:A5:39:1F
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCj7wI65Kr2pZs2gEdv9XbqF2ZXi76FMmk</string>
+</resources>
