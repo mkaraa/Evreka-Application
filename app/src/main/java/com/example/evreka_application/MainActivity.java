@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             lng.setValue(longitude);
 
 
-            containers.put(sensorId, new ContainerInfo( sensorId, temperature, fullnessRate, containerId, latitude, longitude));
+            containers.put(sensorId, new ContainerInfo( sensorId, temperature, fullnessRate, containerId+"", latitude, longitude));
 
         }
         id.setValue(containers);

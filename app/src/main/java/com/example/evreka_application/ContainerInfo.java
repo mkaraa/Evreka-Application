@@ -8,8 +8,8 @@ import com.google.maps.android.clustering.ClusterItem;
 
 public class ContainerInfo implements ClusterItem {
 
-    private String sensorId;
-    private int temperature,fullnessRate,containerId;
+    private String sensorId, containerId;
+    private int temperature,fullnessRate;
     private double lat,lng;
     private LatLng position = new LatLng(lat,lng);
 
@@ -26,7 +26,7 @@ public class ContainerInfo implements ClusterItem {
     @NonNull
     @Override
     public LatLng getPosition() {
-        return position;
+        return new LatLng(lat, lng);
     }
 
     @Nullable
@@ -41,7 +41,7 @@ public class ContainerInfo implements ClusterItem {
         return sensorId;
     }
 
-    public ContainerInfo(String sensorId, int temperature, int fullnessRate, int containerId, double lat, double lng) {
+    public ContainerInfo(String sensorId, int temperature, int fullnessRate, String containerId, double lat, double lng) {
         this.sensorId = sensorId;
         this.temperature = temperature;
         this.fullnessRate = fullnessRate;
@@ -77,11 +77,11 @@ public class ContainerInfo implements ClusterItem {
         this.fullnessRate = fullnessRate;
     }
 
-    public int getContainerId() {
+    public String getContainerId() {
         return containerId;
     }
 
-    public void setContainerId(int containerId) {
+    public void setContainerId(String containerId) {
         this.containerId = containerId;
     }
 
