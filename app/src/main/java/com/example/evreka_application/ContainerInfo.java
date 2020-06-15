@@ -4,12 +4,15 @@ public class ContainerInfo {
 
     private String sensorId;
     private int temperature,fullnessRate,containerId;
+    private double lat,lng;
 
-    public ContainerInfo(String sensorId, int temperature, int fullnessRate, int containerId) {
+    public ContainerInfo(String sensorId, int temperature, int fullnessRate, int containerId, double lat, double lng) {
         this.sensorId = sensorId;
         this.temperature = temperature;
         this.fullnessRate = fullnessRate;
         this.containerId = containerId;
+        this.lat = lat;
+        this.lng = lng;
     }
 
     public String getSensorId() {
@@ -42,5 +45,21 @@ public class ContainerInfo {
 
     public void setContainerId(int containerId) {
         this.containerId = containerId;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
     }
 }

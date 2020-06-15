@@ -22,21 +22,21 @@ public class MainActivity extends AppCompatActivity {
     Button loginButton;
 
     private FirebaseDatabase database;
-    private DatabaseReference id,sensor,temp,fr,container;
+    private DatabaseReference id,sensor,temp,fr,container,lat,lng;
 
     Map<String ,ContainerInfo> containers;
 
     int containerId;
     int temperature,fullnessRate;
     String sensorId;
-
+    double latitude, longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         assignIdToVariables();
-       // generateRandomData();
+        // generateRandomData();
     }
 
     // USED Only 1 to add data in firebase 1000 times
@@ -55,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
             sensorId = UUID.randomUUID().toString();
             temperature = ThreadLocalRandom.current().nextInt(minT, maxT + 1);
             fullnessRate = ThreadLocalRandom.current().nextInt(minFR, maxFR + 1);
-
+            double u = random.nextDouble();
+            double v = random.nextDouble();
+            latitude = Math.toDegrees(Math.acos(u*2-1)) - 90;
+            longitude = 360 * v - 180;
             id.setValue(containerId);
 
             container.setValue(containerId);
@@ -66,7 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
             fr.setValue(fullnessRate);
 
-            containers.put(sensorId, new ContainerInfo( sensorId, temperature, fullnessRate, containerId));
+            lat.setValue(latitude);
+
+            lng.setValue(longitude);
+
+
+            containers.put(sensorId, new ContainerInfo( sensorId, temperature, fullnessRate, containerId, latitude, longitude));
 
         }
         id.setValue(containers);
@@ -80,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
         sensor = container.child("sensorId");
         temp = container.child("temperature");
         fr = container.child("fullnessRate");
+        lat = container.child("lat");
+        lng = container.child("lng");
 
 
         loginButton = (Button) findViewById(R.id.login);

@@ -70,8 +70,9 @@ public class OperatorActivity extends FragmentActivity implements OnMapReadyCall
 
         mMap.setMinZoomPreference(6.0f);
         mMap.setMaxZoomPreference(14.0f);
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        // Add a marker in Sydney and move the camera  -11.563930922631542
+        //-17.777840839585593
+        LatLng sydney = new LatLng(-11.563930922631542, -17.777840839585593);
         mMap.addMarker(
                 new MarkerOptions()
                     .position(sydney)
