@@ -19,15 +19,26 @@ Firebase is used for storing data (which are containerId, sensorId, fullnessRate
 
 ## ScreenShots
 Login Screen
+
 ![Login](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.43.27.png?raw=true
 )
+
+
 Users in Firebase
+
+
 ![Users in firebase](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.51.13.png?raw=true)
 
+
 Data Structure 
+
+
 ![Database](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.50.57.png?raw=true)
 
+
 Operator Screen
+
+
 ![GoogleMap with ClusterManager](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.42.28.png?raw=true)
 
 
