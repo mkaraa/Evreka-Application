@@ -1,18 +1,13 @@
 package com.example.evreka_application;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MessageFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.fragment.app.Fragment;
+
 public class MessageFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -23,28 +18,6 @@ public class MessageFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    public MessageFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MessageFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MessageFragment newInstance(String param1, String param2) {
-        MessageFragment fragment = new MessageFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,5 +33,52 @@ public class MessageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_message, container, false);
+    }    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+
+        super.onActivityCreated(savedInstanceState);
+        Log.d("onActivityCreated", "fragmentA onActivityCreated");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("OnStart", "fragmentA onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("OnResume", "fragmentA onresume");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("onPause", "fragmentA onpause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("onStop", "fragmentA onstop");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("onDestroy", "fragmentA ondestroy ");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d("OnDestroyView", "fragmentA ondestroyview");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d("OnDetach", "fragmentA ondetach");
     }
 }
