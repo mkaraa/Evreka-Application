@@ -30,7 +30,7 @@ Users in Firebase
 ![Users in firebase](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.51.13.png?raw=true)
 
 
-Data Structure 
+Data Structure - 1000 Container and its information is stored in the cloud
 
 
 ![Database](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.50.57.png?raw=true)
