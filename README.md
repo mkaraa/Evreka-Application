@@ -36,7 +36,7 @@ Data Structure
 ![Database](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.50.57.png?raw=true)
 
 
-Operator Screen
+Operator Screen - Using cluster Manager to fast load markers
 
 
 ![GoogleMap with ClusterManager](https://github.com/mkaraa/Evreka-Application/blob/master/screenshots/Screen%20Shot%202020-06-16%20at%2020.42.28.png?raw=true)
